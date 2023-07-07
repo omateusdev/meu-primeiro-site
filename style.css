@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@100;300;400;500;600;700;900&display=swap');
+
+     /*  CRIANDO VARIAVEIS
+    Utilizando esse método a baixo fica mais fácil para escolher a cor e não precisar ficar copiando e colando, melhora seu work flow
+    */
+
+    :root{ /*Método para padronizar fontes e cores. caso seja necesário alterção de cor, mudando aqui, já muda no site*/
+    --cor0: #ebe5c5;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --fonte-padrao: 'Work Sans', Arial,Helvetica,sans-serif;
+    --fonte-destaque: 'Bebas Neue';
+    --fonte-android: 'android';
+    }
+
+    *{
+    margin: 0px;
+    }
+
+    /*@font-face {
+        font-family: 'android';
+        src: url('./fontes/Android.ttf')    format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    } */
+
+    @font-face {
+        font-family: 'Android';
+        src: url('./fontes/IDroid.otf') format('opentype');
+    }
+
+    body{
+
+        background-color: var(--cor0);
+
+    }
+
+    header{
+
+        background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+        min-height: 180px;
+        padding-top: 35px;
+        text-align: center;
+    }
+
+    header > h1{
+
+        color: white;
+        font-size: 3em;
+        text-align: center;
+        font-weight: normal;
+        text-shadow:  2px 0px rgba(0, 0, 0, 0.267);
+        font-family: var(--fonte-destaque);
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+        margin: auto;
+    }
+
+    header > p {
+
+        font-family: var(--fonte-padrao);
+        font-size: 1.2em;
+        color: white;
+        text-shadow:  2px 1px rgba(0, 0, 0, 0.267);
+        padding-bottom: 50px;
+        padding-right: 10px;
+        padding-left: 10px;
+        text-align: center;
+        margin: auto;
+        max-width: 600px;
+   
+    }
+
+    nav{
+        padding: 10px;
+        text-align: left;
+    }
+
+    nav > a {
+        
+        text-decoration: none;
+        color: var(--cor1);
+        font-weight: 600;
+        font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+        padding: 10px;
+        border-radius: 5px ;
+        transition-duration: 0.4s;
+    }
+    
+    nav > a:hover {
+        background-color: #2fa866;
+        color: var(--cor5);
+    }
+
+    
+    main {
+
+        min-width:300px; /*Para que o site fique mais responsivo NESSA aplicação, definimos esses parâmetros de largura*/
+        max-width: 1000px; /*Com 1000px o site para de crescer*/
+        margin: auto;  
+    }
+
+    main h2 {
+
+        font-weight: normal;
+        background-image: linear-gradient(90deg, #83e1ad , white );
+        color: rgb(0, 78, 0);
+        font-family: 'android';
+        margin-left:15px ;
+        font-size: 22px;
+        padding-left: 10px;
+    }
+
+    main img{
+
+        width: 100%;
+
+    }
+
+    article{
+ 
+        background-color: white;
+        border-radius: 0px 0px 20px 20px;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.158);
+    }
+
+    article > h1 {
+        font-size: 1.8em;
+        padding-top: 17px;
+        padding-left: 1em;
+        font-weight: normal;
+        
+    }
+
+    aside{
+        background-color: var(--cor1);
+        border-radius: 10px;
+        margin: 15px;
+        padding: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.521);
+      
+    }
+
+    aside > h3 {
+
+        background-color: var(--cor4);
+        color: white;
+        margin: -20px -20px 0px -20px;
+        padding: 10px;
+        border-radius: 10px 10px 0px 0px;
+        font-family: var(--fonte-padrao);
+
+    }
+
+    aside > ul {
+        columns: 2;
+        font-family: 'Work Sans';
+        list-style-type: '\2714\00A0\00A0' ; /* '\2714\00A0\00A0' utilizar para acrescentar emoji e espaços, essa pratica não funciona em todos os navegadores*/
+        
+    }
+
+     
+    footer{
+
+        text-align: center;
+        background-color: var(--cor5);
+        color: white;
+        font-family: 'Work Sans';
+        padding: 10px;
+     }
+
+     footer > a {
+        text-decoration: none;
+        color: white;
+
+     }
+
+     footer > a:hover{
+        text-decoration: underline;
+        background-color: var(--cor4);
+        padding: 5px;
+        border-radius: 5px;
+     }
+
+    h1{
+
+        font-family: var(--fonte-android);
+        padding-top:10px;
+        padding-left: 15px;
+        font-size: 40px;
+        color:var(--cor5) ;
+     }
+  
+  
+    main h2{
+        font-weight: normal;
+        background-image: linear-gradient(90deg, #83e1ad , white );
+        color: rgb(0, 78, 0);
+        font-family: 'android';
+        margin-left:15px ;
+        font-size: 22px;
+        padding-left: 10px;
+    }
+
+    p > a {
+
+        text-decoration: none;
+        color: #096b00;
+        background-color: var(--cor1); /*Basta escrever --cor3 e já está valido */
+    }
+     
+    p{
+        font-family: 'Work Sans';
+        text-indent: 2em;
+        margin: 15px;
+        line-height: 1.5em;
+        text-align: justify;
+        font-size: 1.2em;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+     
+     .destaque{
+        
+        color: #096b00;
+    }
+
+     
+     .video{
+        background-color: var(--cor4);
+       
+        padding: 20px;
+        padding-bottom: 58%;
+        position: relative;
+    }
+
+   .video > iframe{
+        margin: auto;
+       position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;}
+
+       
+    main img#bugdroid {
+        max-width: 350px;
+        display: block;
+        margin: auto;
+    }
+     
